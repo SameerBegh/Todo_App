@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1.5rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.box {
+  position: relative;
+  background-color: #fff;
+  max-width: 500px;
+  width: 100%;
+  height: 630px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 2px 6px #555;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+  /* max-width: 480px; */
+  width: 100%;
+  line-height: 55px;
+  background-color: #1a63bd;
+  border-radius: 10px 10px 0px 0px;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  margin: auto;
+}
+
+.title h1 {
+  font-size: 40px;
+}
+
+.title p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+.target {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.target input {
+  display: flex;
+  width: 90%;
+  height: 45px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #4d8edd;
+  outline: none;
+  background-color: transparent;
+  font-family: 'Roboto Slab', serif;
+}
+
+.target button {
+  margin: 0px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  font-size: 30px;
+}
+
+.plus {
+  font-size: 40px;
+  color: #1a63bd;
+}
+
+.plus:hover {
+  color: rgb(30, 239, 44);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  color: green;
+  font-weight: 500;
+}
+
+.list {
+  height: 410px;
+  margin-top: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* For Scroll-bar */
+::-webkit-scrollbar {
+  width: 5px
+}
+
+
+ol {
+  position: relative;
+}
+
+ol li {
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 19px;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-right: 18px;
+  color: black;
+  overflow-wrap: break-word;
+  line-height: 150%;
+  margin-bottom: 22px;
+  font-family: 'Roboto Slab ', serif;
+  padding-right: 30px;
+  text-align: justify;
+}
+
+li .active {
+  opacity: 0.5;
+  text-decoration: line-through;
+
+}
+
+.list_style {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.icons {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.list_style .edit {
+  color: #1a63bd;
+  font-size: 19px;
+  margin-right: 10px;
+
+}
+
+.list_style .delete {
+  color: #1560bd;
+  font-size: 17px;
+  cursor: pointer;
+
+}
+
+.list_style .delete:hover {
+  color: red;
+}
+
+.list_style .edit:hover {
+  color: rgb(34, 203, 34);
+}
+
+.list_style input {
+  display: flex;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -20px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.allDelete button {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  margin: 10px;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #1a63bd;
+  color: #fff;
+}
+
+.allDelete button:hover {
+  background-color: red;
+}
+
+.check {
+  color: rgb(0, 255, 8);
+  font-size: 50px;
+}
+
+h3 {
+  margin: 60px auto;
+  align-items: center;
+  text-align: center;
+  line-height: 2rem;
+  width: 160px;
+  font-family: cursive;
+}
+
+.quote {
+  font-size: 35px;
+}
+
+
+@media (max-width : 500px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width :420px) {
+  .container {
+    margin-top: 0px;
+  }
+  
+
+  .title {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .title h1 {
+    margin-top: 5px;
+    font-size: 30px;
+  }
+
+  .title p {
+    font-size: 15px
+  }
+
+  .target {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 96%;
+  }
+
+  .list {
+    overflow: auto;
+
+  }
+
+  .list_style .edit {
+    font-size: 16px;
+  }
+
+  .list_style .delete {
+    font-size: 15px;
+  }
+
+  .allDelete button {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    position: relative;
+  }
+
+}
+
+
+@media (max-width : 390px) {
+
+  .box {
+    padding: auto;
+    margin: auto;
+  }
+
+
+}
